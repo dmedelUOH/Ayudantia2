@@ -12,7 +12,27 @@ def horasXmaquina(semana):
             horas_dic[maquina[0]] = maquina[2]
     return horas_dic
 
-cantidad_horas = horasXmaquina(semana)
+def comunaMasTrabajada(semana):
+    horas_dic = dict()
+    for maquina in semana:
+        comuna = maquina[3]
+        horas = maquina[2]
+        if comuna in horas_dic:
+            #voy a sumar las horas
+            horas_dic[comuna] += horas
+        else:
+            horas_dic[comuna] = horas
+
+    lista = []
+    for comunas, horas in horas_dic.items():
+        tupla = (comunas,horas)
+        lista.append(tupla)
+
+    return lista
+
 
 print("La cantidad de hora asociadas por maquina son:")
-print(cantidad_horas)
+print(horasXmaquina(semana))
+
+print("Resultado problema 2")
+print(comunaMasTrabajada(semana))
