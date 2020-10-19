@@ -14,4 +14,5 @@ def horasXmaquina(semana):
 
 cantidad_horas = horasXmaquina(semana)
 
+print("La cantidad de hora asociadas por maquina son:")
 print(cantidad_horas)
