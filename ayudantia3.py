@@ -39,7 +39,8 @@ class Punto:
         print("El vector entre {} y {} es ({},{})".format(self, p, nuevo_x, nuevo_y))
 
     def distancia(self, p):
-        d = math.sqrt((p.x - self.x)**2+(p.y - self.y)**2) #float
+        #funcion cubica
+        d = math.sqrt((p.x - self.x)**3+(p.y - self.y)**3) #float
         print("La distancia entre los puntos {} y {} es {}".format(self, p, d))
 
 class Rectangulo:
